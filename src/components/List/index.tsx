@@ -10,7 +10,7 @@ interface ListProps {
 
 export const List = ({ data }: ListProps) => {
   return (
-    <Container>
+    <Container done={data.done}>
       <header>
         <h2>{data.title}</h2>
         {data.creatable && (

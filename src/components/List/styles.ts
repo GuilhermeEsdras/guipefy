@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled('div')<{ done?: boolean }>`
   padding: 0 15px; /* 15px de preenchimento interno nas laterais */
   height: 100%;
+
+  opacity: ${({ done }) =>
+    done
+      ? 0.6
+      : 1}; /* Diminui a opacidade apenas se a propriedade 'done' for passada */
 
   /**
    * Flex é a junção de 3 propriedades de um flex-item (filho de um flex):
