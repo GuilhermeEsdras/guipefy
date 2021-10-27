@@ -1,8 +1,8 @@
-import { APITypes, loadLists } from '../../services/api';
+import { DataTypes, loadLists } from '../../services/api';
 import { List } from '../List';
 import { Container } from './styles';
 
-const lists: APITypes[] = loadLists();
+const lists: DataTypes[] = loadLists();
 
 export const Board = () => {
   return (

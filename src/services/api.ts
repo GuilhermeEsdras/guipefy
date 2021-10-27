@@ -5,14 +5,14 @@ export interface ListCardsTypes {
   user?: string;
 }
 
-export interface APITypes {
+export interface DataTypes {
   title: string;
   creatable: boolean;
   cards: ListCardsTypes[];
   done?: boolean;
 }
 
-export function loadLists(): APITypes[] {
+export function loadLists(): DataTypes[] {
   return [
     {
       title: 'Tarefas',

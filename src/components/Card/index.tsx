@@ -1,6 +1,11 @@
+import { ListCardsTypes } from '../../services/api';
 import { Container, Label } from './styles';
 
-export const Card = () => {
+interface CardProps {
+  card: ListCardsTypes;
+}
+
+export const Card = ({ card }: CardProps) => {
   return (
     <Container>
       <header>

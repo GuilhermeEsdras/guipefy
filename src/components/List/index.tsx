@@ -1,11 +1,11 @@
 import { MdAdd } from 'react-icons/md';
 
-import { APITypes } from '../../services/api';
+import { DataTypes } from '../../services/api';
 import { Card } from '../Card';
 import { Container } from './styles';
 
 interface ListProps {
-  data: APITypes;
+  data: DataTypes;
 }
 
 export const List = ({ data }: ListProps) => {
@@ -21,11 +21,9 @@ export const List = ({ data }: ListProps) => {
       </header>
 
       <ul>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {data.cards.map((card) => (
+          <Card key={card.id} card={card} />
+        ))}
       </ul>
     </Container>
   );
