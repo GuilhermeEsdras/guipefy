@@ -9,10 +9,12 @@ export const Card = ({ card }: CardProps) => {
   return (
     <Container>
       <header>
-        <Label color="#7159c1" />
+        {card.labels?.map((label) => (
+          <Label color={label} key={label} />
+        ))}
       </header>
-      <p>Fazer a migração completa de servidor.</p>
-      <img src="https://avatars.githubusercontent.com/u/48355731?v=4" alt="" />
+      <p>{card.content}</p>
+      <img src={card.user} alt="" />
     </Container>
   );
 };
