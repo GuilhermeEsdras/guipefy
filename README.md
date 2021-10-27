@@ -1,6 +1,6 @@
 # Guipify
 
-> Pipefy UI Clone with React JS + Styled Components in TypeScript
+> Pipefy UI Clone in TypeScript with React JS & Styled Components
 
 ## Build Setup
 
