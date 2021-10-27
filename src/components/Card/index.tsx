@@ -14,7 +14,7 @@ export const Card = ({ card }: CardProps) => {
         ))}
       </header>
       <p>{card.content}</p>
-      <img src={card.user} alt="" />
+      {card.user && <img src={card.user} alt="" />}
     </Container>
   );
 };
